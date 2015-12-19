@@ -6,7 +6,10 @@ public static class PrimeHelpers
 { 
     public static bool IsPrime(this BigInteger candidate)
     {
-        for (BigInteger i = 2; i < candidate.Sqrt(); i++)
+        BigInteger sqrt = candidate.Sqrt();
+        Console.Write("sqrt = {0:n0}\r", sqrt);
+
+        for (BigInteger i = 2; i < sqrt; i++)
         {
             if (candidate % i == 0)
             {
